@@ -40,16 +40,16 @@ const Description = styled(ExpenseData)`
     justify-content: left;
 `;
 
-export const ExpenseItem = () => {
-    const expenseDate = new Date();
-    const expenseTitle = "Father Time";
-    const expenseAmount = 45;
+export const ExpenseItem = (props) => {
+    const date = new Date(props.date);
+
+    console.log(date);
 
     return (
         <Container>
-            <ExpenseData>{expenseDate.toLocaleDateString()}</ExpenseData>
-            <Description>{expenseTitle}</Description>
-            <ExpenseData>${expenseAmount}</ExpenseData>
+            <ExpenseData>{date.toLocaleDateString()}</ExpenseData>
+            <Description>{props.title}</Description>
+            <ExpenseData>${props.amount}</ExpenseData>
         </Container>
     );
 };

@@ -15,10 +15,10 @@ const TitleContainer = styled(ExpenseData)`
     }
 `;
 
-export const PageTitle = () => {
+export const PageTitle = (props) => {
     return (
         <TitleContainer>
-            <h1>Insert your code 💕</h1>
+            <h1>{props.title}</h1>
         </TitleContainer>
     );
 };
