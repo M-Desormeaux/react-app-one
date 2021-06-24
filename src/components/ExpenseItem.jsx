@@ -4,10 +4,10 @@ export const ExpenseItem = () => {
 
     return (
         <>
-            <>Date</>
+            <><i>Date</i></>
             <>
-                <h2>Expense Item</h2>
-                <h3>Amount</h3>
+                <h2><i>Expense Item</i></h2>
+                <h3><i>Amount</i></h3>
             </>
         </>
     );
