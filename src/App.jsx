@@ -1,6 +1,7 @@
-import React from 'react';
-import styled, { createGlobalStyle } from 'styled-components';
-import { ExpenseItem } from './components/ExpenseItem';
+import React from "react";
+import styled, { createGlobalStyle } from "styled-components";
+import { ExpenseItem } from "./components/ExpenseItem";
+import { PageTitle } from "./components/PageTitle";
 
 const GlobalStyle = createGlobalStyle`
     * {
@@ -14,8 +15,7 @@ const GlobalStyle = createGlobalStyle`
         margin: 0;
     }
     body {
-        width: 100vw;
-        height: 100vh;
+        min-height: 100vh;
     }
 `;
 
@@ -27,19 +27,26 @@ const AppWrapper = styled.div`
 
 const AppContainer = styled.div`
     padding: 1rem;
-    width: 80%;
+    width: 100%;
     max-width: 1200px;
     min-width: 0;
     min-height: 100vh;
 `;
 
-export const App = () => {
 
+export const App = () => {
     return (
         <AppWrapper>
             <AppContainer>
                 <GlobalStyle />
-                <h1>Insert your code 💕</h1>
+                <PageTitle />
+                <ExpenseItem />
+                <ExpenseItem />
+                <ExpenseItem />
+                <ExpenseItem />
+                <ExpenseItem />
+                <ExpenseItem />
+                <ExpenseItem />
                 <ExpenseItem />
                 <ExpenseItem />
                 <ExpenseItem />
