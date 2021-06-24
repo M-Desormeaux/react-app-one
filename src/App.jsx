@@ -23,6 +23,7 @@ const AppWrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    background: #1a2634;
 `;
 
 const AppContainer = styled.div`
@@ -33,18 +34,12 @@ const AppContainer = styled.div`
     min-height: 100vh;
 `;
 
-
 export const App = () => {
     return (
         <AppWrapper>
             <AppContainer>
                 <GlobalStyle />
                 <PageTitle />
-                <ExpenseItem />
-                <ExpenseItem />
-                <ExpenseItem />
-                <ExpenseItem />
-                <ExpenseItem />
                 <ExpenseItem />
                 <ExpenseItem />
                 <ExpenseItem />

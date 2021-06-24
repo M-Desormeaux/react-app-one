@@ -1,9 +1,14 @@
 import React from "react";
 import styled from "styled-components";
-import { Container } from "./ExpenseItem";
+import { ExpenseData } from "./ExpenseItem";
 
-const TitleContainer = styled(Container)`
+const TitleContainer = styled(ExpenseData)`
     text-align: center;
+    margin-bottom: 1rem;
+
+    &:hover {
+        background: #39a6a3;
+    }
 
     h1 {
         width: 100%;
