@@ -1,7 +1,7 @@
 {
     "name": "react-app-one",
     "scripts": {
-        "dev": "parcel public/index.html"
+        "dev": "parcel serve public/index.html --port 8080 --log-level verbose --open"
     },
     "license": "ISC",
     "dependencies": {
