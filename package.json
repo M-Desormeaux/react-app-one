@@ -3,6 +3,7 @@
     "name": "react-app-one",
     "scripts": {
         "dev": "parcel serve public/index.html --port 8080 --log-level verbose --open",
+        "predeploy": "npm run build",
         "pages": "gh-pages -d build"
     },
     "license": "ISC",
