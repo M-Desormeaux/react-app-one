@@ -6,18 +6,15 @@ const Container = styled.div`
     margin-bottom: 1rem;
     border: 1px solid #1a2634;
     border-radius: 3rem;
-    background: #39a6a3;
+    background: #178481;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    &:hover {
-        background: #178481;
-    }
-
+    &:hover,
     &:hover * {
-        background: #39a6a3;
+        background: #359a97;
     }
 
     &:last-child {
@@ -27,6 +24,7 @@ const Container = styled.div`
 
 export const ExpenseData = styled(Container)`
     width: calc(justify-content+1rem);
+    background: #39a6a3;
     margin: 0;
 
     justify-content: center;
