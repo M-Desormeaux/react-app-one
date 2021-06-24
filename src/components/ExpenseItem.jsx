@@ -4,7 +4,11 @@ export const ExpenseItem = () => {
 
     return (
         <>
-            <h2>uwu</h2>
+            <>Date</>
+            <>
+                <h2>Expense Item</h2>
+                <h3>Amount</h3>
+            </>
         </>
     );
 };
