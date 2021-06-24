@@ -45,6 +45,12 @@ export const App = () => {
                 <ExpenseItem />
                 <ExpenseItem />
                 <ExpenseItem />
+                <ExpenseItem />
+                <ExpenseItem />
+                <ExpenseItem />
+                <ExpenseItem />
+                <ExpenseItem />
+                <ExpenseItem />
             </AppContainer>
         </AppWrapper>
     );
