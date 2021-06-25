@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { ExpenseData } from "./ExpenseItem";
 
 const TitleContainer = styled(ExpenseData)`
-    text-align: center;
     margin-bottom: 1rem;
 
     &:hover {

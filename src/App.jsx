@@ -65,6 +65,11 @@ export const App = () => {
                     amount="135.45"
                     date="2021, 6, 1"
                 />
+                <ExpenseItem
+                    title="Computer"
+                    amount="985.99"
+                    date="2021, 6, 25"
+                />
             </AppContainer>
         </AppWrapper>
     );

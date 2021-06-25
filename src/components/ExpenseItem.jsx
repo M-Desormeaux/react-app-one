@@ -23,9 +23,11 @@ const Container = styled.div`
 `;
 
 export const ExpenseData = styled(Container)`
-    width: calc(justify-content+1rem);
+    min-width: 100px;
+    height: 100%;
     background: #39a6a3;
     margin: 0;
+    text-align: center;
 
     justify-content: center;
     align-items: center;
@@ -40,12 +42,22 @@ const Description = styled(ExpenseData)`
 
 export const ExpenseItem = (props) => {
     const date = new Date(props.date);
-
+    const month = date.toLocaleDateString("en-US", { month: "short" });
+    const day = date.toLocaleDateString("en-US", { day: "2-digit" });
+    const year = date.toLocaleDateString("en-US", { year: "numeric" });
     console.log(date);
 
     return (
         <Container>
-            <ExpenseData>{date.toLocaleDateString()}</ExpenseData>
+            <ExpenseData>
+                <>
+                    <>
+                        {month}, {day}
+                    </>
+                    <br />
+                    <>{year}</>
+                </>
+            </ExpenseData>
             <Description>{props.title}</Description>
             <ExpenseData>${props.amount}</ExpenseData>
         </Container>
