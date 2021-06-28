@@ -1,7 +1,7 @@
 import React from "react";
 import { ExpenseItem } from "./ExpenseItem/ExpenseItem";
 import { ListContainer } from "./ExpenseListStyle";
-import { expenses } from "./ExpenseItem/expenses";
+import { expenses } from "../../data/expenses";
 
 export const ExpenseList = () => {
     const listExpenses = expenses.map((expense) => (
