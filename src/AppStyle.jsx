@@ -23,6 +23,7 @@ export const AppWrapper = styled.div`
     align-items: center;
     background: #4c4c6d;
     color: #204051;
+    font-family: sans-serif;
 `;
 
 export const AppContainer = styled.div`
