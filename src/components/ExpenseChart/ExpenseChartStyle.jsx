@@ -7,4 +7,7 @@ export const ExpenseChartContainer = styled.div`
     background: #3b6978;
     text-align: center;
     color: #e4e3e3;
+
+    display: flex;
+    justify-content: center;
 `;
