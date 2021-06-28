@@ -1,4 +1,5 @@
 import React from "react";
+import { ExpenseDate } from "./ExpenseDate/ExpenseDate";
 import {
     ExpenseItemContainer,
     Description,
@@ -20,15 +21,7 @@ export const ExpenseItem = (props) => {
 
     return (
         <ExpenseItemContainer>
-            <ExpenseData>
-                <>
-                    <>
-                        {month}, {day}
-                    </>
-                    <br />
-                    <>{year}</>
-                </>
-            </ExpenseData>
+            <ExpenseDate month={month} day={day} year={year} />
             <Description>{props.title}</Description>
             <ExpenseData>{cost}</ExpenseData>
         </ExpenseItemContainer>

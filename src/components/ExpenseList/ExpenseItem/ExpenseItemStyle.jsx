@@ -4,7 +4,7 @@ export const ExpenseItemContainer = styled.div`
     padding: 1rem;
     margin-bottom: 1rem;
     border: 1px solid #1a2634;
-    border-radius: 3rem;
+    border-radius: 0.5rem;
     background: #178481;
 
     display: flex;

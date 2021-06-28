@@ -4,7 +4,7 @@ import { ExpenseChartContainer } from "./ExpenseChartStyle";
 export const ExpenseChart = () => {
     return (
         <ExpenseChartContainer>
-            <h1>Yes, Hello. Here is a chart.</h1>
+            <h3>Yes, Hello. Here is a chart.</h3>
         </ExpenseChartContainer>
     );
 };
