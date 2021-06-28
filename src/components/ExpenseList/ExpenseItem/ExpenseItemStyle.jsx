@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const ExpenseItemContainer = styled.div`
     padding: 1rem;
     margin-bottom: 1rem;
     border: 1px solid #1a2634;
@@ -21,7 +21,7 @@ export const Container = styled.div`
     }
 `;
 
-export const ExpenseData = styled(Container)`
+export const ExpenseData = styled(ExpenseItemContainer)`
     min-width: 100px;
     height: 100%;
     background: #39a6a3;

@@ -1,5 +1,9 @@
 import React from "react";
-import { Container, Description, ExpenseData } from "./ExpenseItemStyle";
+import {
+    ExpenseItemContainer,
+    Description,
+    ExpenseData,
+} from "./ExpenseItemStyle";
 
 export const ExpenseItem = (props) => {
     const date = new Date(props.date);
@@ -15,7 +19,7 @@ export const ExpenseItem = (props) => {
     console.log(date);
 
     return (
-        <Container>
+        <ExpenseItemContainer>
             <ExpenseData>
                 <>
                     <>
@@ -27,6 +31,6 @@ export const ExpenseItem = (props) => {
             </ExpenseData>
             <Description>{props.title}</Description>
             <ExpenseData>{cost}</ExpenseData>
-        </Container>
+        </ExpenseItemContainer>
     );
 };

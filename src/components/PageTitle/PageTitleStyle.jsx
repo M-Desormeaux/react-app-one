@@ -6,7 +6,7 @@ export const TitleContainer = styled.div`
     padding: 1rem;
     background: #39a6a3;
     border: 1px solid #1a2634;
-    border-radius: 3rem;
+    border-radius: 4rem;
     margin-bottom: 1rem;
     text-align: center;
 
