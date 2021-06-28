@@ -21,10 +21,12 @@ export const AppWrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #1a2634;
+    background: #4c4c6d;
+    color: #204051;
 `;
 
 export const AppContainer = styled.div`
+    padding: 0.5rem 0;
     width: 100%;
     max-width: 1200px;
     min-width: 0;

@@ -3,9 +3,8 @@ import styled from "styled-components";
 export const ExpenseItemContainer = styled.div`
     padding: 1rem;
     margin-bottom: 1rem;
-    border: 1px solid #1a2634;
     border-radius: 0.5rem;
-    background: #178481;
+    background: #84a9ac;
 
     display: flex;
     justify-content: space-between;
@@ -13,7 +12,11 @@ export const ExpenseItemContainer = styled.div`
 
     &:hover,
     &:hover * {
-        background: #359a97;
+        background: #1a2634;
+    }
+
+    &:hover * {
+        background: #e4e3e3;
     }
 
     &:last-child {
@@ -24,7 +27,7 @@ export const ExpenseItemContainer = styled.div`
 export const ExpenseData = styled(ExpenseItemContainer)`
     min-width: 100px;
     height: 100%;
-    background: #39a6a3;
+    background: #e4e3e3;
     margin: 0;
     text-align: center;
 
@@ -34,7 +37,7 @@ export const ExpenseData = styled(ExpenseItemContainer)`
 
 export const Description = styled(ExpenseData)`
     width: calc(100%);
-    padding-left: 1rem;
+    padding-left: 2rem;
     margin: 0 1rem;
     justify-content: left;
 `;

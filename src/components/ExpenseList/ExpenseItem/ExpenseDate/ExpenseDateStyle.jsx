@@ -2,9 +2,8 @@ import styled from "styled-components";
 
 export const ExpenseDateContainer = styled.div`
     padding: 1rem 2rem;
-    border: 1px solid #1a2634;
     border-radius: 0.5rem;
-    background: #39a6a3;
+    background: #e4e3e3;
     text-align: center;
 `;
 
