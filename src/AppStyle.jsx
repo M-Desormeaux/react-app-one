@@ -24,6 +24,7 @@ export const AppWrapper = styled.div`
 `;
 
 export const AppContainer = styled.div`
+    padding: 1rem 0;
     width: 100%;
     max-width: 1200px;
     min-width: 0;
