@@ -6,6 +6,12 @@ export const ExpenseItem = (props) => {
     const month = date.toLocaleDateString("en-US", { month: "short" });
     const day = date.toLocaleDateString("en-US", { day: "2-digit" });
     const year = date.toLocaleDateString("en-US", { year: "numeric" });
+    const amount = props.amount;
+    console.log(amount);
+    const cost = amount.toLocaleString("en-US", {
+        style: "currency",
+        currency: "USD",
+    });
     console.log(date);
 
     return (
@@ -20,7 +26,7 @@ export const ExpenseItem = (props) => {
                 </>
             </ExpenseData>
             <Description>{props.title}</Description>
-            <ExpenseData>${props.amount}</ExpenseData>
+            <ExpenseData>{cost}</ExpenseData>
         </Container>
     );
 };
