@@ -1,5 +1,5 @@
 import React from "react";
-import { ExpenseItem } from "../ExpenseItem/ExpenseItem";
+import { ExpenseItem } from "./ExpenseItem/ExpenseItem";
 import { ListContainer } from "./ExpenseListStyle";
 
 export const ExpenseList = () => {
