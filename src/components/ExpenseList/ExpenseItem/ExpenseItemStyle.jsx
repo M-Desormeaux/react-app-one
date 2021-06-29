@@ -36,7 +36,7 @@ export const ExpenseData = styled(ExpenseItemContainer)`
 
 export const Description = styled(ExpenseData)`
     width: 100%;
-    padding-left: 2rem;
+    padding: 1rem;
     margin: 0 1rem;
     justify-content: left;
 `;

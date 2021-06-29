@@ -7,11 +7,16 @@ import {
 } from "./ExpenseDateStyle";
 
 export const ExpenseDate = (props) => {
+    const date = new Date(props.date);
+    const month = date.toLocaleDateString("en-US", { month: "short" });
+    const day = date.toLocaleDateString("en-US", { day: "2-digit" });
+    const year = date.toLocaleDateString("en-US", { year: "numeric" });
+
     return (
         <ExpenseDateContainer>
-            <ExpenseMonth>{props.month}</ExpenseMonth>
-            <ExpenseDay>{props.day}</ExpenseDay>
-            <ExpenseYear>{props.year}</ExpenseYear>
+            <ExpenseMonth>{month}</ExpenseMonth>
+            <ExpenseDay>{day}</ExpenseDay>
+            <ExpenseYear>{year}</ExpenseYear>
         </ExpenseDateContainer>
     );
 };
