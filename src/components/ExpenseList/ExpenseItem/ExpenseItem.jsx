@@ -5,6 +5,8 @@ import {
     Description,
     ExpenseData,
     ExpenseButton,
+    TopLayer,
+    BottomLayer,
 } from "./ExpenseItemStyle";
 
 export const ExpenseItem = (props) => {
@@ -22,10 +24,14 @@ export const ExpenseItem = (props) => {
 
     return (
         <ExpenseItemContainer>
-            <ExpenseDate date={props.date} />
-            <Description>{title}</Description>
-            <ExpenseData>{cost}</ExpenseData>
-            <ExpenseButton onClick={clickHandler}>📝</ExpenseButton>
+            <TopLayer>
+                <ExpenseButton onClick={clickHandler}></ExpenseButton>
+            </TopLayer>
+            <BottomLayer>
+                <ExpenseDate date={props.date} />
+                <Description>{title}</Description>
+                <ExpenseData>{cost}</ExpenseData>
+            </BottomLayer>
         </ExpenseItemContainer>
     );
 };

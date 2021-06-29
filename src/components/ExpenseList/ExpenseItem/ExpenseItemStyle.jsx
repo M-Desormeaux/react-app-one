@@ -1,22 +1,23 @@
 import styled from "styled-components";
 
+export const TopLayer = styled.div`
+    display: flex;
+    justify-content: flex-end;
+`;
+export const BottomLayer = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+`;
+
 export const ExpenseItemContainer = styled.div`
     padding: 1rem;
     margin-bottom: 1rem;
     border-radius: 0.5rem;
     background: #84a9ac;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    &:hover,
-    &:hover * {
+    &:hover {
         background: #1a2634;
-    }
-
-    &:hover * {
-        background: #e4e3e3;
     }
 
     &:last-child {
@@ -24,20 +25,21 @@ export const ExpenseItemContainer = styled.div`
     }
 `;
 
-export const ExpenseData = styled(ExpenseItemContainer)`
+export const ExpenseData = styled.div`
+    padding: 1rem;
     min-width: 100px;
+    border-radius: 0.5rem;
     background: #e4e3e3;
     margin: 0;
     text-align: center;
-
-    justify-content: center;
-    align-items: center;
 `;
 
-export const Description = styled(ExpenseData)`
+export const Description = styled.div`
     width: 100%;
     padding: 1rem;
     margin: 0 1rem;
+    border-radius: 0.5rem;
+    background: #e4e3e3;
     justify-content: left;
 
     strike {
@@ -46,19 +48,10 @@ export const Description = styled(ExpenseData)`
 `;
 
 export const ExpenseButton = styled.button`
-    padding: 1rem;
-    width: 20px;
-    height: 20px;
-    margin-left: 1rem;
+    padding: 0.5rem;
+    width: 8px;
+    height: 8px;
     border: 0;
-    border-radius: 0.5rem;
-    background: #e4e3e3;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    &:hover {
-        background: gold;
-    }
+    border-radius: 2rem;
+    background: #ff3052;
 `;
