@@ -39,6 +39,10 @@ export const Description = styled(ExpenseData)`
     padding: 1rem;
     margin: 0 1rem;
     justify-content: left;
+
+    strike {
+        color: #888;
+    }
 `;
 
 export const ExpenseButton = styled.button`
