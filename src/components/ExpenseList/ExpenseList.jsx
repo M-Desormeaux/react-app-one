@@ -6,6 +6,7 @@ import { expenses } from "../../data/expenses";
 export const ExpenseList = () => {
     const listExpenses = expenses.map((expense) => (
         <ExpenseItem
+            itemKey={expense.key}
             title={expense.title}
             amount={expense.amount}
             date={expense.date}

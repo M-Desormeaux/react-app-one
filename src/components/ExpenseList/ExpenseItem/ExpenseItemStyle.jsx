@@ -26,7 +26,6 @@ export const ExpenseItemContainer = styled.div`
 
 export const ExpenseData = styled(ExpenseItemContainer)`
     min-width: 100px;
-    height: 100%;
     background: #e4e3e3;
     margin: 0;
     text-align: center;
@@ -36,8 +35,26 @@ export const ExpenseData = styled(ExpenseItemContainer)`
 `;
 
 export const Description = styled(ExpenseData)`
-    width: calc(100%);
+    width: 100%;
     padding-left: 2rem;
     margin: 0 1rem;
     justify-content: left;
+`;
+
+export const ExpenseButton = styled.button`
+    padding: 1rem;
+    width: 20px;
+    height: 20px;
+    margin-left: 1rem;
+    border: 0;
+    border-radius: 0.5rem;
+    background: #e4e3e3;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+        background: gold;
+    }
 `;
