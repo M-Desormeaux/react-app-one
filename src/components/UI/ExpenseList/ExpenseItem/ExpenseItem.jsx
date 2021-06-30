@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ExpenseDate } from "./ExpenseDate/ExpenseDate";
+import { ExpenseDate } from "../ExpenseDate/ExpenseDate";
 import {
     ExpenseItemContainer,
     Description,
