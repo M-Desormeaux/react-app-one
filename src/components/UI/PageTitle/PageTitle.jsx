@@ -1,10 +1,12 @@
 import React from "react";
-import { TitleContainer } from "./PageTitleStyle";
+import { TitleContainer, TitleLayerTwo } from "./PageTitleStyle";
 
 export const PageTitle = (props) => {
     return (
         <TitleContainer>
-            <h2>{props.title}</h2>
+            <TitleLayerTwo>
+                <h2>{props.title}</h2>
+            </TitleLayerTwo>
         </TitleContainer>
     );
 };

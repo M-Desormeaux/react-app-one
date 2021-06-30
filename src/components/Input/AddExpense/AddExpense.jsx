@@ -1,11 +1,13 @@
 import React from "react";
+import styled from "styled-components";
+import { ExpenseForm } from "../ExpenseForm/ExpenseForm";
 
-const AddExpenseWrapper = styled.div``;
+const AddExpenseContainer = styled.div``;
 
 export const AddExpense = () => {
     return (
-        <AddExpenseWrapper>
+        <AddExpenseContainer>
             <ExpenseForm />
-        </AddExpenseWrapper>
+        </AddExpenseContainer>
     );
 };

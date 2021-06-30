@@ -1,8 +1,9 @@
 import React from "react";
 import { AppContainer, AppWrapper, GlobalStyle } from "./AppStyle";
-import { ExpenseChart } from "./components/ExpenseChart/ExpenseChart";
-import { ExpenseList } from "./components/ExpenseList/ExpenseList";
-import { PageTitle } from "./components/PageTitle/PageTitle";
+import { ExpenseChart } from "./components/UI/ExpenseChart/ExpenseChart";
+import { ExpenseList } from "./components/UI/ExpenseList/ExpenseList";
+import { AddExpense } from "./components/Input/AddExpense/AddExpense";
+import { PageTitle } from "./components/UI/PageTitle/PageTitle";
 
 export const App = () => {
     return (
@@ -10,6 +11,7 @@ export const App = () => {
             <AppContainer>
                 <GlobalStyle />
                 <PageTitle title="Expense Tracker" />
+                <AddExpense />
                 <ExpenseChart />
                 <ExpenseList />
             </AppContainer>

@@ -11,3 +11,9 @@ export const ExpenseChartContainer = styled.div`
     display: flex;
     justify-content: center;
 `;
+
+export const ChartLayerTwo = styled.div`
+    background: #84a9ac;
+    padding: 1rem;
+    border-radius: 0.5rem;
+`;
