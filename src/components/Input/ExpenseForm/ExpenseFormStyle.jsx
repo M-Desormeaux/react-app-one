@@ -14,6 +14,10 @@ export const Controls = styled.div`
 
     display: flex;
     justify-content: center;
+
+    @media screen and (max-width: 750px) {
+        flex-direction: column;
+    }
 `;
 
 export const ControlGroup = styled.div`
@@ -26,6 +30,10 @@ export const ControlGroup = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    @media screen and (max-width: 750px) {
+        margin-bottom: 1rem;
+    }
 `;
 
 export const ControlLabel = styled.div`
@@ -52,6 +60,7 @@ export const ControlInput = styled.input`
     padding: 0.5rem;
     background: #e4e3e3;
     height: 2.5rem;
+    width: 150px;
 `;
 
 export const ControlButton = styled.button`

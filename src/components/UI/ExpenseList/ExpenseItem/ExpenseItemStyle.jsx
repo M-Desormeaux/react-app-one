@@ -31,6 +31,10 @@ export const BottomLayer = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media screen and (max-width: 450px) {
+        flex-direction: column;
+    }
 `;
 
 export const ExpenseData = styled.div`
@@ -52,5 +56,9 @@ export const Description = styled.div`
 
     strike {
         color: #888;
+    }
+
+    @media screen and (max-width: 450px) {
+        margin: 0.5rem 0;
     }
 `;
