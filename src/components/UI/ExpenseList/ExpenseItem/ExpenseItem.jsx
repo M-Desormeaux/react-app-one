@@ -24,9 +24,7 @@ export const ExpenseItem = (props) => {
 
     return (
         <ExpenseItemContainer>
-            <TopLayer>
-                <ExpenseButton onClick={clickHandler}></ExpenseButton>
-            </TopLayer>
+            <ExpenseButton onClick={clickHandler}></ExpenseButton>
             <BottomLayer>
                 <ExpenseDate date={props.date} />
                 <Description>{title}</Description>

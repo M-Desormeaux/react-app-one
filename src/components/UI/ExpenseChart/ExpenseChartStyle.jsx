@@ -6,7 +6,6 @@ export const ExpenseChartContainer = styled.div`
     border-radius: 0.5rem;
     background: #3b6978;
     text-align: center;
-    color: #e4e3e3;
 
     display: flex;
     justify-content: center;
@@ -15,5 +14,6 @@ export const ExpenseChartContainer = styled.div`
 export const ChartLayerTwo = styled.div`
     background: #84a9ac;
     padding: 1rem;
+    width: 100%;
     border-radius: 0.5rem;
 `;

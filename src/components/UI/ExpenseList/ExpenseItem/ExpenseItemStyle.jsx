@@ -1,16 +1,7 @@
 import styled from "styled-components";
 
-export const TopLayer = styled.div`
-    display: flex;
-    justify-content: flex-end;
-`;
-export const BottomLayer = styled.div`
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-`;
-
 export const ExpenseItemContainer = styled.div`
+    position: relative;
     padding: 1rem;
     margin-bottom: 1rem;
     border-radius: 0.5rem;
@@ -23,6 +14,23 @@ export const ExpenseItemContainer = styled.div`
     &:last-child {
         margin: 0;
     }
+`;
+
+export const ExpenseButton = styled.button`
+    position: absolute;
+    right: 1rem;
+    padding: 0.5rem;
+    width: 8px;
+    height: 8px;
+    border: 0;
+    border-radius: 2rem;
+    background: #ff3052;
+`;
+
+export const BottomLayer = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 `;
 
 export const ExpenseData = styled.div`
@@ -45,13 +53,4 @@ export const Description = styled.div`
     strike {
         color: #888;
     }
-`;
-
-export const ExpenseButton = styled.button`
-    padding: 0.5rem;
-    width: 8px;
-    height: 8px;
-    border: 0;
-    border-radius: 2rem;
-    background: #ff3052;
 `;
