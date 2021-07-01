@@ -3,7 +3,7 @@ import { AppContainer, AppWrapper, GlobalStyle } from "./AppStyle";
 import { ExpenseChart } from "./components/UI/ExpenseChart/ExpenseChart";
 import { ExpenseList } from "./components/UI/ExpenseList/ExpenseList";
 import { PageTitle } from "./components/UI/PageTitle/PageTitle";
-import { ExpenseForm } from "./components/Input/ExpenseForm/ExpenseForm";
+import { NewExpense } from "./components/Input/NewExpense/NewExpense";
 
 export const App = () => {
     return (
@@ -11,7 +11,7 @@ export const App = () => {
             <AppContainer>
                 <GlobalStyle />
                 <PageTitle title="Expense Tracker" />
-                <ExpenseForm />
+                <NewExpense />
                 <ExpenseChart />
                 <ExpenseList />
             </AppContainer>
