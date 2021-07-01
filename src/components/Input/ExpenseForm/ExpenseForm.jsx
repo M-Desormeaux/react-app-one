@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
     ControlButton,
     ControlGroup,
@@ -9,23 +9,70 @@ import {
 } from "./ExpenseFormStyle";
 
 export const ExpenseForm = () => {
+    const [expenseTitle, setExpenseTitle] = useState("");
+    const [expenseDate, setExpenseDate] = useState("");
+    const [expenseCost, setExpenseCost] = useState("");
+
+    const dateChangeHandler = (event) => {
+        setExpenseDate(event.target.value);
+    };
+
+    const titleChangeHandler = (event) => {
+        setExpenseTitle(event.target.value);
+    };
+
+    const costChangeHandler = (event) => {
+        setExpenseCost(event.target.value);
+    };
+
+    const submitHandler = (event) => {
+        event.preventDefault();
+
+        const expenseData = {
+            date: new Date(expenseDate),
+            title: expenseTitle,
+            cost: expenseCost,
+        };
+
+        console.log(expenseData);
+
+        setExpenseDate("");
+        setExpenseTitle("");
+        setExpenseCost("");
+    };
+
     return (
         <ExpenseFormContainer>
-            <form>
+            <form onSubmit={submitHandler}>
                 <Controls>
                     <ControlGroup>
                         <ControlLabel>Date</ControlLabel>
-                        <ControlInput type="date" min="2018-01-01" />
+                        <ControlInput
+                            value={expenseDate}
+                            onChange={dateChangeHandler}
+                            type="date"
+                            min="2018-01-01"
+                        />
                     </ControlGroup>
                     <ControlGroup>
                         <ControlLabel>Title</ControlLabel>
-                        <ControlInput type="text" />
+                        <ControlInput
+                            value={expenseTitle}
+                            onChange={titleChangeHandler}
+                            type="text"
+                        />
                     </ControlGroup>
                     <ControlGroup>
                         <ControlLabel>Cost</ControlLabel>
-                        <ControlInput type="number" min="0.01" step="0.01" />
+                        <ControlInput
+                            value={expenseCost}
+                            onChange={costChangeHandler}
+                            type="number"
+                            min="0.01"
+                            step="0.01"
+                        />
                     </ControlGroup>
-                    <ControlButton>Add Expense</ControlButton>
+                    <ControlButton type="submit">Add Expense</ControlButton>
                 </Controls>
             </form>
         </ExpenseFormContainer>
