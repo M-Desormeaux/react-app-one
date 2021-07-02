@@ -4,10 +4,10 @@ import { ExpenseChart } from "./components/UI/ExpenseChart/ExpenseChart";
 import { ExpenseList } from "./components/UI/ExpenseList/ExpenseList";
 import { PageTitle } from "./components/UI/PageTitle/PageTitle";
 import { NewExpense } from "./components/Input/NewExpense/NewExpense";
+import { expenses } from "./data/expenses";
 
 export const App = () => {
     addDynamicExpense = (expense) => {
-        console.log("In App.js");
         console.log(expense);
     };
 
@@ -18,7 +18,7 @@ export const App = () => {
                 <PageTitle title="Expense Tracker" />
                 <NewExpense onNewExpense={addDynamicExpense} />
                 <ExpenseChart />
-                <ExpenseList />
+                <ExpenseList expenseList={expenses} />
             </AppContainer>
         </AppWrapper>
     );

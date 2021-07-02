@@ -1,12 +1,11 @@
 import React from "react";
 import { ExpenseItem } from "./ExpenseItem/ExpenseItem";
 import { ListContainer, ListLayerTwo } from "./ExpenseListStyle";
-import { expenses } from "../../../data/expenses";
 
-export const ExpenseList = () => {
+export const ExpenseList = (props) => {
     const listExpenses =
-        expenses.length > 0 ? (
-            expenses.map((expense) => (
+        props.expenseList.length > 0 ? (
+            props.expenseList.map((expense) => (
                 <ExpenseItem
                     key={expense.key}
                     title={expense.title}
