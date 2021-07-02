@@ -1,8 +1,5 @@
 import React from "react";
-import styled from "styled-components";
 import { ExpenseForm } from "../ExpenseForm/ExpenseForm";
-
-const NewExpenseContainer = styled.div``;
 
 export const NewExpense = (props) => {
     function getRandomInt(min, max) {
@@ -21,8 +18,8 @@ export const NewExpense = (props) => {
     };
 
     return (
-        <NewExpenseContainer>
+        <div>
             <ExpenseForm onExpenseSubmit={expenseSubmitHandler} />
-        </NewExpenseContainer>
+        </div>
     );
 };
