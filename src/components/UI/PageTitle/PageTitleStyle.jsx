@@ -8,9 +8,6 @@ export const TitleContainer = styled.div`
     margin-bottom: 1rem;
     text-align: center;
 
-    justify-content: center;
-    align-items: center;
-
     h1 {
         width: 100%;
     }

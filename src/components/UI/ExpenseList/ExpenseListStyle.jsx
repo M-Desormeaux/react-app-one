@@ -5,3 +5,11 @@ export const ListContainer = styled.div`
     border-radius: 0.5rem;
     background: #3b6978;
 `;
+
+export const ListLayerTwo = styled.div`
+    position: relative;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background: #84a9ac;
+    text-align: center;
+`;

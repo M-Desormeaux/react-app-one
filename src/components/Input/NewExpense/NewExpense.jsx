@@ -4,12 +4,25 @@ import { ExpenseForm } from "../ExpenseForm/ExpenseForm";
 
 const NewExpenseContainer = styled.div``;
 
-export const NewExpense = () => {
-    const expenseSubmitHandler = (mystery) => {};
+export const NewExpense = (props) => {
+    function getRandomInt(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
+    }
+
+    const expenseSubmitHandler = (enteredExpense) => {
+        const expenseSubmitData = {
+            ...enteredExpense,
+            id: `${getRandomInt(1, 50)}_${new Date().getTime()}`,
+        };
+
+        props.onNewExpense(expenseSubmitData);
+    };
 
     return (
         <NewExpenseContainer>
-            <ExpenseForm onExpenseSubmit />
+            <ExpenseForm onExpenseSubmit={expenseSubmitHandler} />
         </NewExpenseContainer>
     );
 };

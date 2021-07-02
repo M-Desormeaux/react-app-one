@@ -8,7 +8,7 @@ import {
     ExpenseFormContainer,
 } from "./ExpenseFormStyle";
 
-export const ExpenseForm = () => {
+export const ExpenseForm = (props) => {
     const [expenseTitle, setExpenseTitle] = useState("");
     const [expenseDate, setExpenseDate] = useState("");
     const [expenseCost, setExpenseCost] = useState("");
@@ -34,7 +34,7 @@ export const ExpenseForm = () => {
             cost: expenseCost,
         };
 
-        console.log(expenseData);
+        props.onExpenseSubmit(expenseData);
 
         setExpenseDate("");
         setExpenseTitle("");

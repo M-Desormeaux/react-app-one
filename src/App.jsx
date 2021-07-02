@@ -6,12 +6,17 @@ import { PageTitle } from "./components/UI/PageTitle/PageTitle";
 import { NewExpense } from "./components/Input/NewExpense/NewExpense";
 
 export const App = () => {
+    addDynamicExpense = (expense) => {
+        console.log("In App.js");
+        console.log(expense);
+    };
+
     return (
         <AppWrapper>
             <AppContainer>
                 <GlobalStyle />
                 <PageTitle title="Expense Tracker" />
-                <NewExpense />
+                <NewExpense onNewExpense={addDynamicExpense} />
                 <ExpenseChart />
                 <ExpenseList />
             </AppContainer>
