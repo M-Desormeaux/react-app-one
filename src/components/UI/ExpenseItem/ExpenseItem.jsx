@@ -5,7 +5,6 @@ import {
     Description,
     ExpenseData,
     ExpenseButton,
-    TopLayer,
     BottomLayer,
 } from "./ExpenseItemStyle";
 
