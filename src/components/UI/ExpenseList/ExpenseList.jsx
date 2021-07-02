@@ -8,7 +8,7 @@ export const ExpenseList = () => {
         expenses.length > 0 ? (
             expenses.map((expense) => (
                 <ExpenseItem
-                    itemKey={expense.key}
+                    key={expense.key}
                     title={expense.title}
                     amount={expense.amount}
                     date={expense.date}

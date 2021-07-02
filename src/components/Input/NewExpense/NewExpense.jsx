@@ -14,7 +14,7 @@ export const NewExpense = (props) => {
     const expenseSubmitHandler = (enteredExpense) => {
         const expenseSubmitData = {
             ...enteredExpense,
-            id: `${getRandomInt(1, 50)}_${new Date().getTime()}`,
+            key: `${getRandomInt(1, 50)}_${new Date().getTime()}`,
         };
 
         props.onNewExpense(expenseSubmitData);
