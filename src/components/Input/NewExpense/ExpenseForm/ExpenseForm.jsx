@@ -31,7 +31,7 @@ export const ExpenseForm = (props) => {
         const expenseData = {
             date: new Date(expenseDate),
             title: expenseTitle,
-            amount: expenseAmount,
+            amount: Number(expenseAmount),
         };
 
         props.onExpenseSubmit(expenseData);

@@ -15,7 +15,7 @@ export const ExpenseItem = (props) => {
         setTitle(<strike>{props.title}</strike>);
     };
 
-    const amount = `$${Number(props.amount).toFixed(2)}`;
+    const amount = `$${props.amount.toFixed(2)}`;
 
     return (
         <ExpenseItemContainer>
