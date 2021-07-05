@@ -3,10 +3,12 @@
     "name": "react-app-one",
     "scripts": {
         "dev": "parcel serve public/index.html --port 8080 --log-level verbose --open",
-        "build": "parcel build public/index.html  --dist-dir build"
+        "build": "parcel build public/index.html  --dist-dir build",
+        "deploy": "yarn build && gh-pages -d build"
     },
     "license": "ISC",
     "dependencies": {
+        "gh-pages": "^3.2.3",
         "parcel": "2.0.0-beta.2",
         "react": "17.0.2",
         "react-dom": "17.0.2",
