@@ -1,14 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import { AppContainer, AppWrapper, GlobalStyle } from "./AppStyle";
 import { ExpenseChart } from "./components/UI/ExpenseChart/ExpenseChart";
 import { ExpenseList } from "./components/UI/ExpenseList/ExpenseList";
 import { PageTitle } from "./components/UI/PageTitle/PageTitle";
 import { NewExpense } from "./components/Input/NewExpense/NewExpense";
-import { expenses } from "./data/expenses";
+import { initialExpenses } from "./data/initialExpenses";
 
 export const App = () => {
+    const [expenses, setExpenses] = useState(initialExpenses);
+
     addDynamicExpense = (expense) => {
-        console.log(expense);
+        setExpenses((prevExpenses) => {
+            console.log([expense, ...prevExpenses]);
+            return [expense, ...prevExpenses];
+        });
     };
 
     return (

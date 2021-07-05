@@ -11,7 +11,7 @@ import {
 export const ExpenseForm = (props) => {
     const [expenseTitle, setExpenseTitle] = useState("");
     const [expenseDate, setExpenseDate] = useState("");
-    const [expenseCost, setExpenseCost] = useState("");
+    const [expenseAmount, setExpenseAmount] = useState("");
 
     const dateChangeHandler = (event) => {
         setExpenseDate(event.target.value);
@@ -21,8 +21,8 @@ export const ExpenseForm = (props) => {
         setExpenseTitle(event.target.value);
     };
 
-    const costChangeHandler = (event) => {
-        setExpenseCost(event.target.value);
+    const amountChangeHandler = (event) => {
+        setExpenseAmount(event.target.value);
     };
 
     const submitHandler = (event) => {
@@ -31,14 +31,14 @@ export const ExpenseForm = (props) => {
         const expenseData = {
             date: new Date(expenseDate),
             title: expenseTitle,
-            cost: expenseCost,
+            amount: expenseAmount,
         };
 
         props.onExpenseSubmit(expenseData);
 
         setExpenseDate("");
         setExpenseTitle("");
-        setExpenseCost("");
+        setExpenseAmount("");
     };
 
     return (
@@ -63,10 +63,10 @@ export const ExpenseForm = (props) => {
                         />
                     </ControlGroup>
                     <ControlGroup>
-                        <ControlLabel>Cost</ControlLabel>
+                        <ControlLabel>Amount</ControlLabel>
                         <ControlInput
-                            value={expenseCost}
-                            onChange={costChangeHandler}
+                            value={expenseAmount}
+                            onChange={amountChangeHandler}
                             type="number"
                             min="0.01"
                             step="0.01"

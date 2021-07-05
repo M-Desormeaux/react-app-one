@@ -1,5 +1,5 @@
 import React from "react";
-import { ExpenseForm } from "../ExpenseForm/ExpenseForm";
+import { ExpenseForm } from "./ExpenseForm/ExpenseForm";
 
 export const NewExpense = (props) => {
     function getRandomInt(min, max) {

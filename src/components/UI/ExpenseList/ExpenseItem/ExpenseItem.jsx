@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ExpenseDate } from "../ExpenseDate/ExpenseDate";
+import { ExpenseDate } from "./ExpenseDate/ExpenseDate";
 import {
     ExpenseItemContainer,
     Description,
@@ -10,10 +10,6 @@ import {
 
 export const ExpenseItem = (props) => {
     const amount = props.amount;
-    const cost = amount.toLocaleString("en-US", {
-        style: "currency",
-        currency: "USD",
-    });
 
     const [title, setTitle] = useState(props.title);
 
@@ -27,7 +23,7 @@ export const ExpenseItem = (props) => {
             <BottomLayer>
                 <ExpenseDate date={props.date} />
                 <Description>{title}</Description>
-                <ExpenseData>{cost}</ExpenseData>
+                <ExpenseData>${amount}</ExpenseData>
             </BottomLayer>
         </ExpenseItemContainer>
     );

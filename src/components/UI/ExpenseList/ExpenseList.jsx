@@ -10,6 +10,7 @@ export const ExpenseList = (props) => {
         setFilteredYear(filterYear);
     };
 
+    // Map all the expense items in expenses to expenseitem components
     const listExpenses =
         props.expenseList.length > 0 ? (
             props.expenseList.map((expense) => (
@@ -21,6 +22,7 @@ export const ExpenseList = (props) => {
                 />
             ))
         ) : (
+            // Return a blank panel if no elements found
             <ListLayerTwo>
                 <h3>No Expenses to list</h3>
             </ListLayerTwo>
