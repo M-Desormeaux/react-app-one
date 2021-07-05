@@ -9,13 +9,13 @@ import {
 } from "./ExpenseItemStyle";
 
 export const ExpenseItem = (props) => {
-    const amount = props.amount;
-
     const [title, setTitle] = useState(props.title);
 
     const clickHandler = () => {
         setTitle(<strike>{props.title}</strike>);
     };
+
+    const amount = `$${Number(props.amount).toFixed(2)}`;
 
     return (
         <ExpenseItemContainer>
@@ -23,7 +23,7 @@ export const ExpenseItem = (props) => {
             <BottomLayer>
                 <ExpenseDate date={props.date} />
                 <Description>{title}</Description>
-                <ExpenseData>${amount}</ExpenseData>
+                <ExpenseData>{amount}</ExpenseData>
             </BottomLayer>
         </ExpenseItemContainer>
     );
