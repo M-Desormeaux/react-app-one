@@ -10,10 +10,20 @@ export const ExpenseList = (props) => {
         setFilteredYear(filterYear);
     };
 
+    const itemFilter = props.expenseList.filter((expense) => {
+        const itemDate = new Date(expense.date);
+        const itemYear = itemDate.toLocaleDateString("en-US", {
+            year: "numeric",
+        });
+        return itemYear == filteredYear;
+    });
+
+    console.log(itemFilter);
+
     // Map all the expense items in expenses to expenseitem components
     const listExpenses =
-        props.expenseList.length > 0 ? (
-            props.expenseList.map((expense) => (
+        itemFilter.length > 0 ? (
+            itemFilter.map((expense) => (
                 <ExpenseItem
                     key={expense.key}
                     title={expense.title}
