@@ -8,10 +8,6 @@ export const ExpenseFormContainer = styled.div`
 `;
 
 export const Controls = styled.div`
-    padding: 1rem;
-    border-radius: 0.5rem;
-    background: #84a9ac;
-
     display: flex;
     justify-content: center;
 

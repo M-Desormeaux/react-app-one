@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { ExpenseForm } from "./ExpenseForm/ExpenseForm";
+import { FormButton, FormContainer, FormLayerTwo } from "./NewExpenseStyle";
 
 export const NewExpense = (props) => {
+    const [formActive, setFormActive] = useState(false);
+
     function getRandomInt(min, max) {
         min = Math.ceil(min);
         max = Math.floor(max);
@@ -20,9 +23,28 @@ export const NewExpense = (props) => {
         props.onNewExpense(expenseSubmitData);
     };
 
+    const showFormHandler = () => {
+        formActive === false ? setFormActive(true) : setFormActive(false);
+    };
+
+    const hideFormHandler = (formValue) => {
+        formValue === false ? setFormActive(false) : setFormActive(true);
+    };
+
     return (
-        <div>
-            <ExpenseForm onExpenseSubmit={expenseSubmitHandler} />
-        </div>
+        <FormContainer>
+            <FormLayerTwo>
+                {formActive === false ? (
+                    <FormButton onClick={showFormHandler}>
+                        Add Expense
+                    </FormButton>
+                ) : (
+                    <ExpenseForm
+                        onExpenseSubmit={expenseSubmitHandler}
+                        onFormSubmit={hideFormHandler}
+                    />
+                )}
+            </FormLayerTwo>
+        </FormContainer>
     );
 };

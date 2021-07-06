@@ -36,48 +36,48 @@ export const ExpenseForm = (props) => {
 
         props.onExpenseSubmit(expenseData);
 
+        props.onFormSubmit(false);
+
         setExpenseDate("");
         setExpenseTitle("");
         setExpenseAmount("");
     };
 
     return (
-        <ExpenseFormContainer>
-            <form onSubmit={submitHandler}>
-                <Controls>
-                    <ControlGroup>
-                        <ControlLabel>Date</ControlLabel>
-                        <ControlInput
-                            value={expenseDate}
-                            onChange={dateChangeHandler}
-                            type="date"
-                            min="2018-01-01"
-                            required
-                        />
-                    </ControlGroup>
-                    <ControlGroup>
-                        <ControlLabel>Title</ControlLabel>
-                        <ControlInput
-                            value={expenseTitle}
-                            onChange={titleChangeHandler}
-                            type="text"
-                            required
-                        />
-                    </ControlGroup>
-                    <ControlGroup>
-                        <ControlLabel>Amount</ControlLabel>
-                        <ControlInput
-                            value={expenseAmount}
-                            onChange={amountChangeHandler}
-                            type="number"
-                            min="0.01"
-                            step="0.01"
-                            required
-                        />
-                    </ControlGroup>
-                    <ControlButton type="submit">Add Expense</ControlButton>
-                </Controls>
-            </form>
-        </ExpenseFormContainer>
+        <form onSubmit={submitHandler}>
+            <Controls>
+                <ControlGroup>
+                    <ControlLabel>Date</ControlLabel>
+                    <ControlInput
+                        value={expenseDate}
+                        onChange={dateChangeHandler}
+                        type="date"
+                        min="2018-01-01"
+                        // required
+                    />
+                </ControlGroup>
+                <ControlGroup>
+                    <ControlLabel>Title</ControlLabel>
+                    <ControlInput
+                        value={expenseTitle}
+                        onChange={titleChangeHandler}
+                        type="text"
+                        // required
+                    />
+                </ControlGroup>
+                <ControlGroup>
+                    <ControlLabel>Amount</ControlLabel>
+                    <ControlInput
+                        value={expenseAmount}
+                        onChange={amountChangeHandler}
+                        type="number"
+                        min="0.01"
+                        step="0.01"
+                        // required
+                    />
+                </ControlGroup>
+                <ControlButton type="submit">Add Expense</ControlButton>
+            </Controls>
+        </form>
     );
 };
