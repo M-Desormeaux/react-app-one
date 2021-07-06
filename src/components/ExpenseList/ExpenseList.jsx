@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { ExpenseItem } from "./ExpenseItem/ExpenseItem";
 import { ExpenseFilter } from "./ExpenseFilter/ExpenseFilter.jsx";
 import { ListContainer, ListLayerTwo } from "./ExpenseListStyle";
+import { ExpenseChart } from "./ExpenseChart/ExpenseChart";
 
 export const ExpenseList = (props) => {
     const [filteredYear, setFilteredYear] = useState("2021");
@@ -17,8 +18,6 @@ export const ExpenseList = (props) => {
         });
         return itemYear == filteredYear;
     });
-
-    console.log(itemFilter);
 
     // Map all the expense items in expenses to expenseitem components
     const listExpenses =
@@ -40,6 +39,7 @@ export const ExpenseList = (props) => {
 
     return (
         <ListContainer>
+            <ExpenseChart />
             <ExpenseFilter
                 selected={filteredYear}
                 onFilter={filterYearHandler}
