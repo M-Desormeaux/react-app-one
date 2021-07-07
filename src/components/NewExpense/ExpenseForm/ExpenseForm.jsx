@@ -53,7 +53,8 @@ export const ExpenseForm = (props) => {
                         onChange={dateChangeHandler}
                         type="date"
                         min="2018-01-01"
-                        required
+                        max="2025-12-31"
+                        // required
                     />
                 </ControlGroup>
                 <ControlGroup>
@@ -62,7 +63,7 @@ export const ExpenseForm = (props) => {
                         value={expenseTitle}
                         onChange={titleChangeHandler}
                         type="text"
-                        required
+                        // required
                     />
                 </ControlGroup>
                 <ControlGroup>
@@ -73,7 +74,7 @@ export const ExpenseForm = (props) => {
                         type="number"
                         min="0.01"
                         step="0.01"
-                        required
+                        // required
                     />
                 </ControlGroup>
                 <ControlButton type="submit">Add Expense</ControlButton>

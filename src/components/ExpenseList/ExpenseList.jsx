@@ -30,6 +30,8 @@ export const ExpenseList = (props) => {
             ? filteredYear === "all"
                 ? true
                 : itemYear === filteredYear
+            : filteredYear === "all"
+            ? itemMonth === filteredMonth
             : itemYear === filteredYear && itemMonth === filteredMonth;
     });
 
@@ -51,11 +53,24 @@ export const ExpenseList = (props) => {
             </ListLayerTwo>
         );
 
-    const filteredAmounts = itemFilter.map((expense) => expense.amount);
+    const filteredItems = itemFilter.map((expense) => {
+        const fullDate = new Date(expense.date);
+        const month = fullDate.toLocaleDateString("en-US", { month: "short" });
+        const year = fullDate.toLocaleDateString("en-US", { year: "numeric" });
+        return {
+            amount: expense.amount,
+            month: month,
+            year: year,
+        };
+    });
 
     return (
         <ListContainer>
-            <ExpenseChart amounts={filteredAmounts} />
+            <ExpenseChart
+                items={filteredItems}
+                selectedYear={filteredYear}
+                selectedMonth={filteredMonth}
+            />
             <ExpenseFilter
                 selectedYear={filteredYear}
                 selectedMonth={filteredMonth}
