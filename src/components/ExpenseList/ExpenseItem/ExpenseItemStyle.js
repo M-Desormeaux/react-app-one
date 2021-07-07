@@ -37,6 +37,16 @@ export const BottomLayer = styled.div`
     }
 `;
 
+export const Secretlayer = styled.div`
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    @media screen and (max-width: 450px) {
+        margin: 0.5rem 0;
+    }
+`;
+
 export const ExpenseData = styled.div`
     padding: 1rem;
     min-width: 100px;
@@ -59,6 +69,6 @@ export const Description = styled.div`
     }
 
     @media screen and (max-width: 450px) {
-        margin: 0.5rem 0;
+        margin: 0.5rem 1rem 0.5rem 0;
     }
 `;

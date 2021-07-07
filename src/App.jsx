@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { AppContainer, AppWrapper, GlobalStyle } from "./AppStyle";
-import { ExpenseList } from "./components/UI/ExpenseList/ExpenseList";
-import { NewExpense } from "./components/Input/NewExpense/NewExpense";
+import { ExpenseList } from "./components/ExpenseList/ExpenseList";
+import { NewExpense } from "./components/NewExpense/NewExpense";
 import { initialExpenses } from "./data/initialExpenses";
 
 export const App = () => {

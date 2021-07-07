@@ -6,6 +6,7 @@ import {
     ExpenseData,
     ExpenseButton,
     BottomLayer,
+    Secretlayer,
 } from "./ExpenseItemStyle";
 
 export const ExpenseItem = (props) => {
@@ -22,8 +23,10 @@ export const ExpenseItem = (props) => {
             <ExpenseButton onClick={clickHandler}></ExpenseButton>
             <BottomLayer>
                 <ExpenseDate date={props.date} />
-                <Description>{title}</Description>
-                <ExpenseData>{amount}</ExpenseData>
+                <Secretlayer>
+                    <Description>{title}</Description>
+                    <ExpenseData>{amount}</ExpenseData>
+                </Secretlayer>
             </BottomLayer>
         </ExpenseItemContainer>
     );

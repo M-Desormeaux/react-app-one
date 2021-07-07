@@ -17,16 +17,20 @@ export const FilterGroup = styled.div`
     border-radius: 0.5rem;
     background: #e4e3e3;
     width: fit-content;
+    margin-right: 1rem;
 
     display: flex;
     justify-content: center;
+
+    &:last-child {
+        margin: 0;
+    }
 `;
 
 export const FilterLabel = styled.label`
     position: absolute;
     padding: 0 0.25rem;
     top: 0.5rem;
-    left: 1.7rem;
     z-index: 1;
     background: #e4e3e3;
 `;
@@ -37,12 +41,12 @@ export const FilterSelect = styled.select`
     padding: 0.5rem;
     background: #e4e3e3;
     height: 2.5rem;
-    width: 125px;
+    width: 80px;
 
     display: flex;
     justify-content: center;
 `;
 
 export const FilterOption = styled.option`
-    width: 100%;
+    width: fit-content;
 `;
