@@ -45,14 +45,11 @@ export const ExpenseFilter = (props) => {
                     value={props.selectedYear}
                 >
                     <FilterOption value="all">all</FilterOption>
-                    <FilterOption value="2025">2025</FilterOption>
                     <FilterOption value="2024">2024</FilterOption>
                     <FilterOption value="2023">2023</FilterOption>
                     <FilterOption value="2022">2022</FilterOption>
                     <FilterOption value="2021">2021</FilterOption>
                     <FilterOption value="2020">2020</FilterOption>
-                    <FilterOption value="2019">2019</FilterOption>
-                    <FilterOption value="2018">2018</FilterOption>
                 </FilterSelect>
             </FilterGroup>
         </FilterLayerTwo>

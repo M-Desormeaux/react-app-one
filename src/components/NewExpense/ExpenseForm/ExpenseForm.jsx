@@ -52,8 +52,8 @@ export const ExpenseForm = (props) => {
                         value={expenseDate}
                         onChange={dateChangeHandler}
                         type="date"
-                        min="2018-01-01"
-                        max="2025-12-31"
+                        min="2020-01-01"
+                        max="2024-12-31"
                         // required
                     />
                 </ControlGroup>

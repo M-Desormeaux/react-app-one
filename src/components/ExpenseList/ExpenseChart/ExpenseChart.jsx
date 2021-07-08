@@ -1,6 +1,5 @@
 import React from "react";
 import { ExpenseChartContainer } from "./ExpenseChartStyle";
-import { ExpenseBar } from "./ExpenseBar/ExpenseBar";
 
 export const ExpenseChart = (props) => {
     const items = props.items;
@@ -18,13 +17,12 @@ export const ExpenseChart = (props) => {
                 ? "Yearly Snapshot"
                 : "Single Year Snapshot"
             : selectedYear === "all"
-            ? "Same Month Every Year"
+            ? "Month Through the Years"
             : "Single Month Snapshot";
 
     return (
         <ExpenseChartContainer>
             <h4>{label}</h4>
-            <ExpenseBar />
         </ExpenseChartContainer>
     );
 };
