@@ -39,15 +39,6 @@ export const ControlLabel = styled.div`
     left: 23px;
     z-index: 1;
     background: #e4e3e3;
-
-    /* &:after {
-        content: " ";
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        z-index: -1;
-        background: #e4e3e3;
-    } */
 `;
 
 export const ControlInput = styled.input`
