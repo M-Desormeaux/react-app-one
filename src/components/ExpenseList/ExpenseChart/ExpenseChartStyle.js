@@ -28,4 +28,8 @@ export const ExpenseChartGraph = styled.div`
     justify-content: center;
     align-items: center;
     background: #e4e3e3;
+
+    @media screen and (max-height: 625px) {
+        flex-direction: column;
+    }
 `;

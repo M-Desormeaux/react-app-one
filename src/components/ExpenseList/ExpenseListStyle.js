@@ -8,7 +8,7 @@ export const ListContainer = styled.div`
 
 export const ListLayerTwo = styled.div`
     position: relative;
-    padding: 1rem;
+    padding: 2rem;
     border-radius: 0.5rem;
     background: #84a9ac;
     text-align: center;

@@ -5,7 +5,7 @@ import {
     BarFill,
     BarLabel,
     DynamicBar,
-} from "./CharBarStyle";
+} from "./ChartBarStyle";
 
 export const ChartBar = (props) => {
     let barFill = 0;
@@ -20,11 +20,7 @@ export const ChartBar = (props) => {
                 <BarBody>
                     <BarFill heightValue={barFill} />
                 </BarBody>
-                <BarLabel>
-                    <>{props.month}</>
-                    <br />
-                    <>{props.year}</>
-                </BarLabel>
+                <BarLabel>{props.label}</BarLabel>
             </DynamicBar>
         </BarContainer>
     );

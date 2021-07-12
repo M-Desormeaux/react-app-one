@@ -55,13 +55,10 @@ export const ExpenseList = (props) => {
     const filteredItems = itemFilter.map((expense) => {
         const key = expense.key;
         const fullDate = new Date(expense.date);
-        const month = fullDate.toLocaleDateString("en-US", { month: "short" });
-        const year = fullDate.toLocaleDateString("en-US", { year: "numeric" });
         return {
             key: key,
             amount: expense.amount,
-            month: month,
-            year: year,
+            date: fullDate,
         };
     });
 
