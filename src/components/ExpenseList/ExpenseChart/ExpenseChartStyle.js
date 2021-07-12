@@ -29,7 +29,10 @@ export const ExpenseChartGraph = styled.div`
     align-items: center;
     background: #e4e3e3;
 
-    @media screen and (max-height: 625px) {
+    @media screen and (max-width: 600px) {
+        display: flex;
         flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
     }
 `;

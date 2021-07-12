@@ -1,11 +1,5 @@
 import React from "react";
-import {
-    BarBody,
-    BarContainer,
-    BarFill,
-    BarLabel,
-    DynamicBar,
-} from "./ChartBarStyle";
+import { BarBody, BarFill, BarLabel, DynamicBar } from "./ChartBarStyle";
 
 export const ChartBar = (props) => {
     let barFill = 0;
@@ -15,13 +9,11 @@ export const ChartBar = (props) => {
     }
 
     return (
-        <BarContainer>
-            <DynamicBar>
-                <BarBody>
-                    <BarFill heightValue={barFill} />
-                </BarBody>
-                <BarLabel>{props.label}</BarLabel>
-            </DynamicBar>
-        </BarContainer>
+        <DynamicBar>
+            <BarBody>
+                <BarFill heightValue={barFill} />
+            </BarBody>
+            <BarLabel>{props.label}</BarLabel>
+        </DynamicBar>
     );
 };
