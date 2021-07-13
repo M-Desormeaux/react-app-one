@@ -89,3 +89,11 @@ export const chartYears = [
         value: 0,
     },
 ];
+
+export const thisMonth = [
+    {
+        key: 01,
+        label: "",
+        value: 0,
+    },
+];

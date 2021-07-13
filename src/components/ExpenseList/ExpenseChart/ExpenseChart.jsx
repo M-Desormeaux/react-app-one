@@ -1,6 +1,6 @@
 import React from "react";
 import { ChartBar } from "./ChartBar/ChartBar";
-import { chartMonths, chartYears } from "./ExpenseCharts";
+import { chartMonths, chartYears, thisMonth } from "./ExpenseCharts";
 import {
     ExpenseChartContainer,
     ExpenseChartGraph,
@@ -24,7 +24,6 @@ export const ExpenseChart = (props) => {
             : selectedMonth + " " + selectedYear + " History";
 
     for (const item in props.items) {
-        console.log(`MonthID: ${item}`);
         const expenseMonth = props.items[item].date.getMonth();
         chartMonths[expenseMonth].value += props.items[item].amount;
     }
@@ -38,8 +37,8 @@ export const ExpenseChart = (props) => {
         }
     }
 
-    for (const year in chartYears) {
-        console.log(`${chartYears[year].label}: ${chartYears[year].value}`);
+    for (const item in props.items) {
+        thisMonth[0].value += props.items[item].amount;
     }
 
     const chartGraph =
@@ -64,8 +63,24 @@ export const ExpenseChart = (props) => {
                       />
                   ))
             : selectedYear === "all"
-            ? selectedMonth + " History"
-            : selectedMonth + " " + selectedYear + " History";
+            ? chartYears.map((dataPoint) => (
+                  <ChartBar
+                      key={dataPoint.key}
+                      id={dataPoint.key}
+                      label={dataPoint.label}
+                      value={dataPoint.value}
+                      maxValue={yearMax}
+                  />
+              ))
+            : thisMonth.map((dataPoint) => (
+                  <ChartBar
+                      key={dataPoint.key}
+                      id={dataPoint.key}
+                      label={selectedMonth}
+                      value={dataPoint.value}
+                      maxValue={yearMax}
+                  />
+              ));
 
     return (
         <ExpenseChartContainer>

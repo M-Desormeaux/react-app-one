@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const DynamicBar = styled.div`
-    margin-right: 1rem;
+    margin: 0 1rem 0 0;
 
     display: flex;
     flex-direction: column;
@@ -26,6 +26,7 @@ export const DynamicBar = styled.div`
 export const BarBody = styled.div`
     height: 100px;
     width: 20px;
+    margin-bottom: 0.5rem;
     border-radius: 0.25rem;
     overflow: hidden;
     background: #84a9ac;
@@ -36,7 +37,7 @@ export const BarBody = styled.div`
     @media screen and (max-width: 600px) {
         height: 20px;
         width: 160px;
-        margin-right: 0.5rem;
+        margin: 0 0.5rem 0 0;
     }
 `;
 
