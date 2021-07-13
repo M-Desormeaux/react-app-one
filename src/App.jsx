@@ -7,9 +7,18 @@ import { initialExpenses } from "./data/initialExpenses";
 export const App = () => {
     const [expenses, setExpenses] = useState(initialExpenses);
 
-    addDynamicExpense = (expense) => {
+    addExpenseHandler = (expense) => {
         setExpenses((prevExpenses) => {
             return [expense, ...prevExpenses];
+        });
+    };
+
+    deleteExpenseHandler = (targetID) => {
+        setExpenses((prevExpenses) => {
+            const updatedExpenses = prevExpenses.filter(
+                (target) => target.key !== targetID
+            );
+            return updatedExpenses;
         });
     };
 
@@ -17,8 +26,11 @@ export const App = () => {
         <AppWrapper>
             <AppContainer>
                 <GlobalStyle />
-                <NewExpense onNewExpense={addDynamicExpense} />
-                <ExpenseList expenseList={expenses} />
+                <NewExpense onNewExpense={addExpenseHandler} />
+                <ExpenseList
+                    expenseList={expenses}
+                    onDeleteExpense={deleteExpenseHandler}
+                />
             </AppContainer>
         </AppWrapper>
     );

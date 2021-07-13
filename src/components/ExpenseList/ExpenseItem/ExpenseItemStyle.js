@@ -6,6 +6,7 @@ export const ExpenseItemContainer = styled.div`
     margin-bottom: 1rem;
     border-radius: 0.5rem;
     background: #84a9ac;
+    display: flex;
 
     &:hover {
         background: #1a2634;
@@ -14,37 +15,44 @@ export const ExpenseItemContainer = styled.div`
     &:last-child {
         margin: 0;
     }
+
+    @media screen and (max-width: 450px) {
+        flex-direction: column;
+        align-items: center;
+    }
 `;
 
 export const ExpenseButton = styled.button`
     position: absolute;
-    right: 1rem;
-    padding: 0.5rem;
-    width: 8px;
-    height: 8px;
+    width: 16px;
+    height: 16px;
+    top: 8px;
+    right: 8px;
+
     border: 0;
-    border-radius: 2rem;
+    border-radius: 100%;
     background: #ff3052;
+
+    align-self: flex-end;
+
+    @media screen and (max-width: 760px) {
+        width: 40px;
+        height: 40px;
+    }
 `;
 
 export const BottomLayer = styled.div`
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    justify-content: flex-end;
 
-    @media screen and (max-width: 450px) {
-        flex-direction: column;
-    }
+    width: 100%;
 `;
 
 export const Secretlayer = styled.div`
     width: 100%;
     display: flex;
     align-items: center;
-
-    @media screen and (max-width: 450px) {
-        margin: 0.5rem 0;
-    }
 `;
 
 export const ExpenseData = styled.div`
@@ -69,6 +77,6 @@ export const Description = styled.div`
     }
 
     @media screen and (max-width: 450px) {
-        margin: 0.5rem 1rem 0.5rem 0;
+        margin: 0 1rem 0 0;
     }
 `;

@@ -39,9 +39,11 @@ export const ExpenseList = (props) => {
             itemFilter.map((expense) => (
                 <ExpenseItem
                     key={expense.key}
+                    id={expense.key}
                     title={expense.title}
                     amount={expense.amount}
                     date={expense.date}
+                    onDelete={props.onDeleteExpense}
                 />
             ))
         ) : (

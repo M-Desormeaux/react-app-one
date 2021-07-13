@@ -10,21 +10,19 @@ import {
 } from "./ExpenseItemStyle";
 
 export const ExpenseItem = (props) => {
-    const [title, setTitle] = useState(props.title);
-
     const clickHandler = () => {
-        setTitle(<strike>{props.title}</strike>);
+        props.onDelete(props.id);
     };
 
     const amount = `$${props.amount.toFixed(2)}`;
 
     return (
         <ExpenseItemContainer>
-            <ExpenseButton onClick={clickHandler}></ExpenseButton>
+            <ExpenseDate date={props.date} />
             <BottomLayer>
-                <ExpenseDate date={props.date} />
+                <ExpenseButton onClick={clickHandler}></ExpenseButton>
                 <Secretlayer>
-                    <Description>{title}</Description>
+                    <Description>{props.title}</Description>
                     <ExpenseData>{amount}</ExpenseData>
                 </Secretlayer>
             </BottomLayer>
