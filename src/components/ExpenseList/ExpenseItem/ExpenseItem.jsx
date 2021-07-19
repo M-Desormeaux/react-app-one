@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { ExpenseDate } from "./ExpenseDate/ExpenseDate";
 import {
     ExpenseItemContainer,
@@ -20,7 +20,7 @@ export const ExpenseItem = (props) => {
         <ExpenseItemContainer>
             <ExpenseDate date={props.date} />
             <BottomLayer>
-                <ExpenseButton onClick={clickHandler}></ExpenseButton>
+                <ExpenseButton onClick={clickHandler}/>
                 <Secretlayer>
                     <Description>{props.title}</Description>
                     <ExpenseData>{amount}</ExpenseData>
